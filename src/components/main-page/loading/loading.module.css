@@ -70,3 +70,13 @@
     width: 34px;
     height: 34px;
 }
+
+
+@media screen and (max-width: 870px) {
+    .event{
+        flex-direction: row-reverse;
+    }
+    .balance{
+        visibility: hidden;
+    }
+}
