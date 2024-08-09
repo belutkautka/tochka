@@ -84,7 +84,7 @@ function History() {
         <div className={styles.history}>
             <h1 className={styles.history__header}>История</h1>
             <div className={styles.history__content}>
-                {!loading&& <div className={styles.filters}>
+                {!loading && <div className={styles.filters}>
                     <FilterButton text='Тип операции'/>
                     <FilterButton text='Период'/>
                     <FilterButton text='Счет'/>

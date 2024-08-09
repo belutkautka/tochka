@@ -1,9 +1,8 @@
-import {Link} from 'react-router-dom';
-import TochkaLogo from  '../../../public/Logo.svg';
-import Bell from  '../../../public/Stroked/Bell.svg';
-import Logout from  '../../../public/Stroked/Logout.svg';
-import InviteMan from  '../../../public/Stroked/Invite Man.svg';
-import Settings from  '../../../public/Common/Stroked/Gear.svg';
+import TochkaLogo from '../../../public/Logo.svg';
+import Bell from '../../../public/Stroked/Bell.svg';
+import Logout from '../../../public/Stroked/Logout.svg';
+import InviteMan from '../../../public/Stroked/Invite Man.svg';
+import Settings from '../../../public/Common/Stroked/Gear.svg';
 import styles from './navigation-bar.module.css';
 
 
@@ -11,7 +10,7 @@ function NavigationBar() {
     return (
         <div className={styles.nav_bar}>
             <div className={styles.logo}>
-                <img src={TochkaLogo} alt="Точка банк" />
+                <img src={TochkaLogo} alt="Точка банк"/>
                 <div className={styles.circle}/>
             </div>
 
@@ -32,4 +31,5 @@ function NavigationBar() {
         </div>
     );
 }
+
 export default NavigationBar;

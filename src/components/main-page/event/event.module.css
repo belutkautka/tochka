@@ -1,10 +1,10 @@
-.event{
+.event {
     margin: 15px 0;
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
 
-.balance{
+.balance {
     color: #949494;
     font-size: 16px;
     font-weight: bold;
@@ -12,25 +12,25 @@
     width: 120px;
 }
 
-.media_balance{
+.media_balance {
     display: none;
 }
 
-.info{
+.info {
     width: calc(100% - 175px);
 }
 
-.title{
+.title {
     color: #191919;
     font-size: 16px;
 }
 
-.description{
+.description {
     color: #949494;
     font-size: 14px;
 }
 
-.icon{
+.icon {
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -40,31 +40,31 @@
 }
 
 @media screen and (max-width: 870px) {
-    .event{
+    .event {
         flex-direction: row-reverse;
     }
 
-    .media_balance{
+    .media_balance {
         display: block;
     }
 
-    .balance{
+    .balance {
         display: none;
     }
 
-    .info{
+    .info {
         width: 100%;
     }
 
-    .title{
+    .title {
 
     }
 
-    .description{
+    .description {
 
     }
 
-    .icon{
+    .icon {
 
     }
 

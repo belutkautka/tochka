@@ -1,4 +1,3 @@
-
 import styles from './main-page.module.css'
 import History from "./history.tsx";
 
@@ -11,4 +10,5 @@ function MainPage() {
         </div>
     );
 }
+
 export default MainPage;
