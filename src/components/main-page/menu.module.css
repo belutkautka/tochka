@@ -1,0 +1,33 @@
+.menu {
+    position: fixed;
+    bottom: 0;
+    height: 63px;
+    width: 100%;
+    display: none;
+    background-color: #FFFFFF;
+}
+
+.menu__button {
+    display: none;
+    position: fixed;
+    height: 54px;
+    width: 54px;
+    background-color: #191919;
+    border-radius: 50%;
+    bottom: 63px;
+    z-index: 1;
+    left: calc(50% - 27px);
+
+}
+
+@media screen and (max-width: 870px) {
+    .menu {
+        display: block;
+    }
+
+    .menu__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
