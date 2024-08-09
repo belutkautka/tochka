@@ -1,5 +1,5 @@
 .event{
-    margin: 15px 20px;
+    margin: 15px 0;
     display: flex;
     gap:20px;
 }
@@ -34,3 +34,4 @@
     margin: auto 0 auto auto;
     align-items: center;
 }
+

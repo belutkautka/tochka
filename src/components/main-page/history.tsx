@@ -11,35 +11,35 @@ function History() {
         setTimeout(() => {
 
 
-        fetch('/api/events')
-            .then((res) => {
-                setLoading(false);
-                res.json()
-                    .then()
-                    .then(value => value)
-                    .then(data => data.data)
-                    .then(data => {
-                        if (events.length ==0){
-                            setEvents([])
-                        }
-                        data.map(event => {
-                            const newEvent = {
-                                date: event.date,
-                                title: event.title,
-                                description: event.description,
-                                optionalDescription: event.optionalDescription,
-                                type: event.type,
-                                icon: event.icon,
-                                balance: event.balance,
-                                service: event.service
-                            };
-                            setEvents((prevEvents) => [...prevEvents, newEvent]);
+            fetch('/api/events')
+                .then((res) => {
+                    setLoading(false);
+                    res.json()
+                        .then()
+                        .then(value => value)
+                        .then(data => data.data)
+                        .then(data => {
+                            if (events.length == 0) {
+                                setEvents([])
+                            }
+                            data.map(event => {
+                                const newEvent = {
+                                    date: event.date,
+                                    title: event.title,
+                                    description: event.description,
+                                    optionalDescription: event.optionalDescription,
+                                    type: event.type,
+                                    icon: event.icon,
+                                    balance: event.balance,
+                                    service: event.service
+                                };
+                                setEvents((prevEvents) => [...prevEvents, newEvent]);
+                            })
                         })
-                    })
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
+                })
+                .catch((error) => {
+                    console.error('Error fetching data:', error);
+                });
         }, 1000); // 1000ms (1 second) timeout
     }, []);
 
@@ -56,6 +56,7 @@ function History() {
             return result;
         }, {});
     }
+
     const groupedData = groupBy(events, 'date');
 
     const today = new Date();
@@ -86,30 +87,40 @@ function History() {
                     <FilterButton text='Тип операции'/>
                     <FilterButton text='Период'/>
                     <FilterButton text='Счет'/>
-                    <FilterButton className ={styles.only__pc} text='Карта'/>
+                    <FilterButton className={styles.only__pc} text='Карта'/>
                 </div>
-                {(loading)? <div>Loading</div>:
-                    ((events.length==0) ?
-                        <div className={styles.dog__container}>
-                            <img className={styles.dog} src={'../../../public/Illustration.svg'} alt="Ничего не найденно"/>
-                            <div>Здесь будут все платежи и другие события.</div>
-                            <div>Пока их нет.</div>
-                        </div>
-                        :
-                        Object.keys(groupedData).map((date, index) =>
-                            <div key={index}>
-                                <div className={styles.date}> {(() => {
-                                    const dt = new Date(date);
-                                    if (isToday(dt)) {
-                                        return 'Сегодня, ' + dt.getDate() + " "+getMonthName(dt);
-                                    }else if (isTomorrow(dt)){
-                                        return 'Вчера, ' + dt.getDate() + " "+getMonthName(dt);
-                                    } else {
-                                        return dt.getDate() + " "+getMonthName(dt);
-                                    }
-                                })()}</div>
-                                {groupedData[date].map(event =><Event event={event}/>)}
-                            </div>))
+                {(loading) ? <div>Loading</div> :
+                    ((events.length == 0) ?
+                            <div className={styles.dog__container}>
+                                <img className={styles.dog} src={'../../../public/Illustration.svg'}
+                                     alt="Ничего не найденно"/>
+                                <div>Здесь будут все платежи и другие события.</div>
+                                <div>Пока их нет.</div>
+                            </div>
+                            :
+                            <>
+                                <div className={styles.events}>
+                                    {Object.keys(groupedData).map((date, index) =>
+                                        <div key={index}>
+                                            <div className={styles.date}> {(() => {
+                                                const dt = new Date(date);
+                                                if (isToday(dt)) {
+                                                    return 'Сегодня, ' + dt.getDate() + " " + getMonthName(dt);
+                                                } else if (isTomorrow(dt)) {
+                                                    return 'Вчера, ' + dt.getDate() + " " + getMonthName(dt);
+                                                } else {
+                                                    return dt.getDate() + " " + getMonthName(dt);
+                                                }
+                                            })()}</div>
+                                            {groupedData[date].map(event => <Event event={event}/>)}
+                                        </div>)}
+                                </div>
+                                <div className={styles.end}>
+                                    <div>Это — конец истоии.</div>
+                                    <div>Других событий не было.</div>
+                                </div>
+                            </>
+                    )
                 }
 
 
@@ -118,4 +129,5 @@ function History() {
         </div>
     );
 }
+
 export default History;

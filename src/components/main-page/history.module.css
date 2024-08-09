@@ -1,4 +1,4 @@
-.history{
+.history {
     width: 50%;
     margin-right: 20px;
     margin-left: 20px;
@@ -7,10 +7,11 @@
     overflow: auto;
     position: fixed;
     z-index: -1;
-    height: 100vh;
+    height: calc(100vh - 160px);
     border-radius: 10px;
 }
-.history__header{
+
+.history__header {
     margin: 0;
     display: flex;
     align-items: center;
@@ -20,33 +21,33 @@
     padding-bottom: 15px;
 }
 
-.history__content{
-   background-color: #FFFFFF;
+.history__content {
+    background-color: #FFFFFF;
     border-radius: 10px;
 }
 
-.filters{
+.filters {
     display: flex;
     gap: 10px;
     padding: 20px;
     position: sticky;
-    top:-40px;
+    top: -40px;
     background-color: #FFFFFF;
     border-radius: 10px;
     z-index: 1;
 }
 
-.date{
+.date {
     position: sticky;
     top: 30px;
     background-color: #FFFFFF;
 }
 
-.dog{
+.dog {
     margin-bottom: 82px;
 }
 
-.dog__container{
+.dog__container {
     padding-top: 122px;
     padding-bottom: 80px;
     display: flex;
@@ -57,9 +58,27 @@
     font-size: 16px;
 }
 
+.events > div:last-child {
+    border-bottom: #D1D1D1 solid 1px;
+}
+
+.events {
+    margin: 0 20px;
+}
+
+.end {
+    color: #D1D1D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
 
 @media screen and (max-width: 870px) {
-    .history{
+    .history {
         width: 100%;
     }
 }
