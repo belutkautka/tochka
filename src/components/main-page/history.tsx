@@ -3,6 +3,7 @@ import FilterButton from "./filters/filter-button.tsx";
 import {useEffect, useState} from "react";
 import {IEvent} from "../../mocks/handlers.ts";
 import Event from "./event/event.tsx";
+import Loading from "./loading/loading.tsx";
 
 function History() {
     const [events, setEvents] = useState<Array<IEvent>>([]);
@@ -83,13 +84,13 @@ function History() {
         <div className={styles.history}>
             <h1 className={styles.history__header}>История</h1>
             <div className={styles.history__content}>
-                <div className={styles.filters}>
+                {!loading&& <div className={styles.filters}>
                     <FilterButton text='Тип операции'/>
                     <FilterButton text='Период'/>
                     <FilterButton text='Счет'/>
-                    <FilterButton className={styles.only__pc} text='Карта'/>
-                </div>
-                {(loading) ? <div>Loading</div> :
+                    <FilterButton text='Карта'/>
+                </div>}
+                {loading ? <Loading/> :
                     ((events.length == 0) ?
                             <div className={styles.dog__container}>
                                 <img className={styles.dog} src={'../../../public/Illustration.svg'}

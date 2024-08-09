@@ -1,0 +1,72 @@
+.header{
+    width: calc(100% - 40px);
+    margin-top: 20px;
+}
+.loading{
+    padding-top: 20px;
+}
+
+.box{
+    background-color: #EEEEEE;
+    width: calc(100% - 40px);
+    height: 24px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 18px;
+}
+
+.filter{
+    width: 12.5%;
+}
+
+.filters{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.events{
+    margin-top: 35px;
+}
+
+.date{
+    height: 20px;
+    width: 20%;
+}
+.event{
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 200px;
+}
+.balance{
+    width: 15%;
+}
+
+.balance__header{
+    width: 100%;
+    height: 16px;
+    margin-bottom: 11px;
+}
+
+.balance__description{
+    width: 80%;
+    height: 12px;
+}
+
+.info{
+    width: calc(75% - 55px);
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.info__element{
+    width: 100%;
+    height: 16px;
+}
+
+.icon{
+    width: 34px;
+    height: 34px;
+}

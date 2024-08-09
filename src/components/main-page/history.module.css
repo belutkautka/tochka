@@ -34,13 +34,19 @@
     top: -40px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .date {
     position: sticky;
     top: 30px;
     background-color: #FFFFFF;
+    color: #191919;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1;
 }
 
 .dog {
