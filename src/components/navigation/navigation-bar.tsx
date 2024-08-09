@@ -9,7 +9,7 @@ import styles from './navigation-bar.module.css';
 
 function NavigationBar() {
     return (
-        <div className={styles.lol}>
+        <div className={styles.nav_bar}>
             <div className={styles.logo}>
                 <img src={TochkaLogo} alt="Точка банк" />
                 <div className={styles.circle}/>
@@ -22,9 +22,9 @@ function NavigationBar() {
             </div>
             <div className={styles.icons}>
                 <img src={Bell} alt="Уведомления" height='24px'/>
-                <img src={InviteMan} alt="Пригласи друга" height='24px'/>
+                <img className={styles.icon} src={InviteMan} alt="Пригласи друга" height='24px'/>
                 <img src={Settings} alt="Пригласи друга" height='24px'/>
-                <img src={Logout} alt="Выход" height='24px'/>
+                <img className={styles.icon} src={Logout} alt="Выход" height='24px'/>
             </div>
         </div>
     );

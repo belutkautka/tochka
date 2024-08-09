@@ -1,4 +1,4 @@
-.lol{
+.nav_bar{
     position: fixed;
     padding: 20px;
     top:0;
@@ -37,4 +37,16 @@
     display: flex;
     gap: 12px;
     align-items: center;
+}
+
+@media screen and (max-width: 870px) {
+    .icon{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .pages{
+        display: none;
+    }
 }

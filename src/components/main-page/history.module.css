@@ -85,6 +85,15 @@
 
 @media screen and (max-width: 870px) {
     .history {
-        width: 100%;
+        width: calc(100% - 40px);
+    }
+    .history__header{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .filters{
+        overflow: auto;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
