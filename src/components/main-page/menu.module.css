@@ -20,6 +20,33 @@
 
 }
 
+.circle {
+    width: 8px;
+    height: 8px;
+    background-color: #D84D4D;
+    border-radius: 50%;
+}
+
+.circle__small {
+    position: relative;
+    margin-left: -3px;
+}
+
+.history{
+    display: flex;
+}
+
+.text{
+    font-size: 10px;
+    color: #C8C8C8;
+}
+
+.text__history{
+    font-size: 10px;
+    color: #835DE1;
+}
+
+
 @media screen and (max-width: 870px) {
     .menu {
         display: flex;

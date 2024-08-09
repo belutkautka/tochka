@@ -21,7 +21,10 @@ function NavigationBar() {
                 <h3 className={styles.page}>Сервисы</h3>
             </div>
             <div className={styles.icons}>
-                <img src={Bell} alt="Уведомления" height='24px'/>
+                <div className={styles.bell}>
+                    <img src={Bell} alt="Уведомления" height='24px'/>
+                    <div className={[styles.circle, styles.circle__small].join(" ")}/>
+                </div>
                 <img className={styles.icon} src={InviteMan} alt="Пригласи друга" height='24px'/>
                 <img src={Settings} alt="Пригласи друга" height='24px'/>
                 <img className={styles.icon} src={Logout} alt="Выход" height='24px'/>

@@ -13,11 +13,16 @@
     display: flex;
     margin-left: auto;
     gap: 20px;
+    align-items: center;
 }
 
+.bell{
+    display: flex;
+}
 .pages{
     display: flex;
     gap: 10px;
+    margin-left: 50px;
 }
 
 .page{
@@ -33,6 +38,12 @@
     background-color: #D84D4D;
     border-radius: 50%;
 }
+
+.circle__small {
+    position: relative;
+    margin-left: -3px;
+}
+
 .logo{
     display: flex;
     gap: 12px;
