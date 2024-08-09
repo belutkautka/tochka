@@ -1,0 +1,36 @@
+.event{
+    margin: 15px 20px;
+    display: flex;
+    gap:20px;
+}
+
+.balance{
+    color: #949494;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 120px;
+}
+
+.info{
+    width: calc(100% - 175px);
+}
+
+.title{
+    color: #191919;
+    font-size: 16px;
+}
+
+.description{
+    color: #949494;
+    font-size: 14px;
+}
+
+.icon{
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    margin: auto 0 auto auto;
+    align-items: center;
+}
