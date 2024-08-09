@@ -5,13 +5,16 @@ import {IEvent} from "../../mocks/handlers.ts";
 import Event from "./event/event.tsx";
 import Loading from "./loading/loading.tsx";
 
+
+//TODO: добавить обработку ошибок, поработать с временем,
+// чтоб корректно дата отображалась ( часовые пояса), стилизовать фильтры и добавить логику фильтрации,
+// вынести логику со временем в другую компаненту, выексти цвета и тд в css переменные, отрефакторить названия
+//PS: Тамаут для симулирования времени ответа сервера
 function History() {
     const [events, setEvents] = useState<Array<IEvent>>([]);
     const [loading, setLoading] = useState<Boolean>(true);
     useEffect(() => {
         setTimeout(() => {
-
-
             fetch('/api/events')
                 .then((res) => {
                     setLoading(false);
@@ -123,8 +126,6 @@ function History() {
                             </>
                     )
                 }
-
-
             </div>
 
         </div>
