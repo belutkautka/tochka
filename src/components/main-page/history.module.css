@@ -87,11 +87,13 @@
     .history {
         width: calc(100% - 40px);
     }
-    .history__header{
+
+    .history__header {
         font-size: 24px;
         font-weight: bold;
     }
-    .filters{
+
+    .filters {
         overflow: auto;
         padding-right: 0;
         padding-left: 0;

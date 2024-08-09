@@ -12,6 +12,10 @@
     width: 120px;
 }
 
+.media_balance{
+    display: none;
+}
+
 .info{
     width: calc(100% - 175px);
 }
@@ -35,3 +39,33 @@
     align-items: center;
 }
 
+@media screen and (max-width: 870px) {
+    .event{
+        flex-direction: row-reverse;
+    }
+
+    .media_balance{
+        display: block;
+    }
+
+    .balance{
+        display: none;
+    }
+
+    .info{
+        width: 100%;
+    }
+
+    .title{
+
+    }
+
+    .description{
+
+    }
+
+    .icon{
+
+    }
+
+}

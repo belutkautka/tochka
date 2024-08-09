@@ -12,6 +12,7 @@ function Event({event}: EventProps) {
         <div className={styles.event}>
             <div className={styles.balance}>{event.balance||'Карты'}</div>
             <div className={styles.info}>
+                <div className={[styles.media_balance, styles.balance].join(" ")}>{event.balance||'Карты'}</div>
                 <div className={styles.title}>{event.title}</div>
                 <div className={styles.description}>{event.description}</div>
                 {event.optionalDescription&&<div className={styles.description}>{event.optionalDescription}</div>}
